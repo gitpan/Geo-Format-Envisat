@@ -41,13 +41,25 @@ description version 2007-11-22) and C<Vol08_Asar_4B_20071025.pdf>
 
 =head1 FUNCTIONS
 
-B<envisat_meta_from_file>(FILENAME)
+B<envisat_meta_from_file>(FILENAME, OPTIONS)
 
 =over 4
 
 Read all meta-data from the file specified by its FILENAME.  The file
 can be in compressed form, although you may need to install some
 additional C<IO::Uncompress> modules.
+
+ Option          --Default
+ take_dsd_content  <false>
+
+. take_dsd_content => BOOLEAN
+
+=over 4
+
+Collect the content from all non-measurement DSD records.  These are
+binary fields.
+
+=back
 
 example: envisat_meta_from_file
 
@@ -82,8 +94,8 @@ example: envisat_mph_from_name
 
 =head1 SEE ALSO
 
-This module is part of Geo-Format-Envisat distribution version 0.01,
-built on December 31, 2008. Website: F<http://perl.overmeer.net/geo/>
+This module is part of Geo-Format-Envisat distribution version 0.02,
+built on January 21, 2009. Website: F<http://perl.overmeer.net/geo/>
 All modules in this suite:
 L</Geo::Point>,
 L</Geo::Proj4>,
@@ -99,7 +111,7 @@ F<http://geo-perl@list.hut.fi|the mailinglist>
 
 =head1 LICENSE
 
-Copyrights 2008 by Mark Overmeer. For other contributors see ChangeLog.
+Copyrights 2008-2009 by Mark Overmeer. For other contributors see ChangeLog.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
