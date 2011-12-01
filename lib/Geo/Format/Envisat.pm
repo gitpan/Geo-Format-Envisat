@@ -1,13 +1,13 @@
-# Copyrights 2008-2009 by Mark Overmeer.
+# Copyrights 2008-2011 by Mark Overmeer.
 #  For other contributors see ChangeLog.
 # See the manual pages for details on the licensing terms.
-# Pod stripped from pm file by OODoc 1.05.
+# Pod stripped from pm file by OODoc 2.00.
 use warnings;
 use strict;
 
 package Geo::Format::Envisat;
 use vars '$VERSION';
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 use base 'Exporter';
 

@@ -41,20 +41,20 @@ description version 2007-11-22) and C<Vol08_Asar_4B_20071025.pdf>
 
 =head1 FUNCTIONS
 
-B<envisat_meta_from_file>(FILENAME, OPTIONS)
-
 =over 4
+
+=item B<envisat_meta_from_file>(FILENAME, OPTIONS)
 
 Read all meta-data from the file specified by its FILENAME.  The file
 can be in compressed form, although you may need to install some
 additional C<IO::Uncompress> modules.
 
- Option          --Default
- take_dsd_content  <false>
+ -Option          --Default
+  take_dsd_content  <false>
 
-. take_dsd_content => BOOLEAN
+=over 2
 
-=over 4
+=item take_dsd_content => BOOLEAN
 
 Collect the content from all non-measurement DSD records.  These are
 binary fields.
@@ -68,11 +68,7 @@ example: envisat_meta_from_file
  my $sph = $meta->{sph};  # Specific Product Header
  my $mds = $meta->{dsd}{MSD1};  # data-set description
 
-=back
-
-B<envisat_mph_from_name>(FILENAME|STRING)
-
-=over 4
+=item B<envisat_mph_from_name>(FILENAME|STRING)
 
 Pass the product FILENAME as STRING, and it will get decomposed into
 some records which are also in the Main Product Header meta-data records.
@@ -94,8 +90,8 @@ example: envisat_mph_from_name
 
 =head1 SEE ALSO
 
-This module is part of Geo-Format-Envisat distribution version 0.02,
-built on January 21, 2009. Website: F<http://perl.overmeer.net/geo/>
+This module is part of Geo-Format-Envisat distribution version 0.03,
+built on December 01, 2011. Website: F<http://perl.overmeer.net/geo/>
 All modules in this suite:
 L</Geo::Point>,
 L</Geo::Proj4>,
@@ -103,15 +99,16 @@ L</Geo::WKT>,
 L</Math::Polygon>,
 L</Geo::GML>,
 L</Geo::ISO19139>,
-L</Geo::EOP>, and
-L</Geo::Format::Envisat>.
+L</Geo::EOP>,
+L</Geo::Format::Envisat>, and
+L</Geo::Format::Landsat>.
 
-Please post questions or ideas to
-F<http://geo-perl@list.hut.fi|the mailinglist>
+Please post questions or ideas to the mailinglist at
+F<http://geo-perl@list.hut.fi>
 
 =head1 LICENSE
 
-Copyrights 2008-2009 by Mark Overmeer. For other contributors see ChangeLog.
+Copyrights 2008-2011 by Mark Overmeer. For other contributors see ChangeLog.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
